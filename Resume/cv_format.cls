@@ -15,7 +15,7 @@
   {}
  
 \newcommand{\datedsection}[2]{%
-  \section[#1]{#1 \hfill #2}%
+  \section[\textbf{#1}]{#1 \hfill #2}%
 }
 \newcommand{\datedsubsection}[2]{%
   \subsection[#1]{#1 \hfill #2}%
@@ -25,11 +25,10 @@
   \centerline{\Huge{#1}}%
 }
  
-\newcommand\contact[5]{%
+\newcommand\contact[3]{%
     \centerline{%
         \makebox[0pt][c]{%
             #1 {\large\textperiodcentered} #2 {\large\textperiodcentered} #3
-            \ #4 \ \ #5%
         }%
     }%
 }
