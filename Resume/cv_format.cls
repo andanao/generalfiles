@@ -2,6 +2,8 @@
 \ProvidesClass{cv_format}[2019/11/26 Custom CV Class]
 \LoadClass{article}
 \RequirePackage{titlesec}
+\RequirePackage[margin=0.5in]{geometry}
+\RequirePackage{nopageno}
  
 \titleformat{\section}
   {\Large\scshape\raggedright}
