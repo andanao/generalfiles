@@ -1,4 +1,3 @@
-\NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cv_format}[2019/11/26 Custom CV Class]
 \LoadClass{article}
 \RequirePackage{titlesec}
@@ -20,6 +19,7 @@
   \section[\textbf{#1}]{#1 \hfill #2}%
 }
 \newcommand{\datedsubsection}[2]{%
+  \scshape:small capitals;
   \subsection[#1]{#1 \hfill #2}%
 }
  
@@ -41,6 +41,7 @@
     {\large\textperiodcentered}\hfill #3\\
     #4\hfill #5%
 }
+
 
 \newenvironment{c_itemize}
 { \begin{itemize}

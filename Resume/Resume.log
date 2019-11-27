@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.11.26)  26 NOV 2019 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.11.26)  26 NOV 2019 21:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -325,11 +325,25 @@ LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
 
-Overfull \hbox (7.73029pt too wide) in alignment at lines 22--25
- [] [] [] [] [] [] 
+Overfull \hbox (0.53607pt too wide) in paragraph at lines 23--24
+[]|\OT1/cmr/m/sc/10 2019| 
  []
 
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\OT1/cmr/m/sc/10 Bachelor of
+ []
+
+
+Overfull \hbox (0.53607pt too wide) in paragraph at lines 24--25
+[]|\OT1/cmr/m/sc/10 2019| 
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 28.
+
+LaTeX Font Info:    Font shape `OMS/cmr/m/sc' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 66.
@@ -346,18 +360,22 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 95.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 95.
 Package rerunfilecheck Info: File `Resume.out' has not changed.
 (rerunfilecheck)             Checksum: 3AFBF750D5963556E91B420C5BDF9B83;892.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
  ) 
 Here is how much of TeX's memory you used:
- 6150 strings out of 492164
- 91991 string characters out of 6129102
- 195248 words of memory out of 5000000
- 10406 multiletter control sequences out of 15000+600000
- 6962 words of font info for 25 fonts, out of 8000000 for 9000
+ 6154 strings out of 492164
+ 92050 string characters out of 6129102
+ 193267 words of memory out of 5000000
+ 10410 multiletter control sequences out of 15000+600000
+ 7564 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,5n,38p,312b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,5n,38p,312b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on c:/Users/Adrian/Documents/GitHub/generalfiles/Resume/Resume.pdf (2 pages, 119645 bytes).
+Output written on c:/Users/Adrian/Documents/GitHub/generalfiles/Resume/Resume.pdf (2 pages, 112180 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  92 compressed objects within 1 object stream
