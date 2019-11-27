@@ -1,16 +1,27 @@
 \documentclass[letterpaper,11pt]{cv_format}
 \usepackage{hyperref}
+\usepackage{array}
+\usepackage{longtable,tabularx}
+\usepackage{graphicx}
+\usepackage{changepage}
 \begin{document}
 \name{Adrian Danao-Schroeder}
-\centering    B.S. Aerospace Engineering \textperiodcentered B.A. Chinese
+\textbf{\centering B.S. Aerospace Engineering \hspace{1cm}\textperiodcentered\hspace{1cm}  B.A. Chinese\\}
 
 \contact{Silver Spring, MD, 20910}{adriandanao@gmail.com}{\href{https://adriandanao.com/}{adriandanao.com}}
 
 \section{Education}
 
-\datedsubsection{Universwity of Nohere}{2004-2008}
-Bachelor of Science\hspace{1cm}Aerospace Engineering\hfill Graduated May 2019 \\
-Bachelor of Arts \hspace{1cm}Chinese\hfill Graduated Aug. 2019
+\datedsubsection{University of Maryland College Park}{GPA. 3.24}
+\vspace{-2em}
+\begin{adjustwidth}{10em}{0em}
+\begin{longtable}{p{.2\linewidth} p{.838\linewidth} rp{.05\linewidth} rp{.15\linewidth}}
+Bachelor of Science & Aerospace Engineering & May & 2019 \\
+Bachelor of Arts  & Chinese & Aug. & 2019
+\end{longtable}
+\end{adjustwidth}
+\vspace{-2em}
+\textbf{\emph{Relevant Courses:}} Space Power and Propulsion, Mechanics of Composites, Linear Controls, Vibrations and Aeroelasticity, Spacecraft Dynamics
 
 \section{Work}
 \datedsubsection{ABC asdfLimited}{2008-Now}
@@ -19,7 +30,8 @@ Bachelor of Arts \hspace{1cm}Chinese\hfill Graduated Aug. 2019
 {Improved productivity by 20\%}
 {Decreased costs by \$10,000 dollarydoos}
 {testes}
- 
+ test
+
 \section{Skills}
 \begin{tabular}{l l l l}
 C\# & T-SQL & Javascript & HTML \\
