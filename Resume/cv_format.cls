@@ -3,6 +3,7 @@
 \RequirePackage{titlesec}
 \RequirePackage[margin=0.5in]{geometry}
 \RequirePackage{nopageno}
+
  
 \titleformat{\section}
   {\Large\scshape\raggedright}
@@ -10,16 +11,18 @@
   {}
   [\titlerule]
  
-  \titleformat{\subsection}
-  {\large\scshape\raggedright}
+\titleformat{\subsection}
+  {\large\raggedright}
   {}{0em}
   {}
- 
+
+\titlespacing{\subsection}{0em}{-.5em}{.25em}
+
+
 \newcommand{\datedsection}[2]{%
   \section[\textbf{#1}]{#1 \hfill #2}%
 }
 \newcommand{\datedsubsection}[2]{%
-  \scshape:small capitals;
   \subsection[#1]{#1 \hfill #2}%
 }
  
@@ -35,14 +38,6 @@
     }%
 }
  
-\newcommand{\longcontact}[5]{%
-    \noindent
-    #1\hfill {\large\textperiodcentered}\hfill #2\hfill
-    {\large\textperiodcentered}\hfill #3\\
-    #4\hfill #5%
-}
-
-
 \newenvironment{c_itemize}
 { \begin{itemize}
     \setlength{\itemsep}{0pt}
