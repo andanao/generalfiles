@@ -41,12 +41,10 @@
     {\large\textperiodcentered}\hfill #3\\
     #4\hfill #5%
 }
- 
-\newcommand{\workitems}[4]{%
-    \begin{itemize}
-    \item #1
-    \item #2
-    \item #3
-    \item #4
-    \end{itemize}%
-}
+
+\newenvironment{c_itemize}
+{ \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  } 
