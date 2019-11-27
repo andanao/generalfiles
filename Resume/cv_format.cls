@@ -27,7 +27,7 @@
 }
  
 \newcommand{\name}[1]{%
-  \centerline{\Huge{#1}}%
+  \centerline{\huge{#1}}%
 }
  
 \newcommand\contact[3]{%
