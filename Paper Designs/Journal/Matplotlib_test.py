@@ -1,53 +1,23 @@
 import matplotlib.pyplot as plt
-from matplotlib.collections import EventCollection
 import numpy as np
 
-# Fixing random state for reproducibility
-np.random.seed(19680801)
+def make_image(data, outputname, size=(8.5, 11), dpi=80):
+    fig = plt.figure()
+    fig.set_size_inches(size)
+    ax = plt.Axes(fig, [0., 0., 1., 1.])
+    ax.set_axis_off()
+    fig.add_axes(ax)
+    # plt.set_cmap('hot')
+    ax.imshow(data, aspect='equal')
+    plt.savefig(outputname, dpi=dpi)
 
-# create random data
-xdata = np.random.random([2, 10])
+# data = mpimg.imread(inputname)[:,:,0]
 
-# split the data into two parts
-xdata1 = xdata[0, :]
-xdata2 = xdata[1, :]
+width = 130 
+height = 210
 
-# sort the data so it makes clean curves
-xdata1.sort()
-xdata2.sort()
+# data = np.arange(1,82).reshape((9,9))
+data = np.array([[0,0],[0,height],[width,0],[width,height]])
 
-# create some y data points
-ydata1 = xdata1 ** 2
-ydata2 = 1 - xdata2 ** 3
-
-# plot the data
-fig = plt.figure()
-ax = fig.add_subplot(1, 1, 1)
-ax.plot(xdata1, ydata1, color='tab:blue')
-ax.plot(xdata2, ydata2, color='tab:orange')
-
-# create the events marking the x data points
-xevents1 = EventCollection(xdata1, color='tab:blue', linelength=0.05)
-xevents2 = EventCollection(xdata2, color='tab:orange', linelength=0.05)
-
-# create the events marking the y data points
-yevents1 = EventCollection(ydata1, color='tab:blue', linelength=0.05,
-                           orientation='vertical')
-yevents2 = EventCollection(ydata2, color='tab:orange', linelength=0.05,
-                           orientation='vertical')
-
-# add the events to the axis
-ax.add_collection(xevents1)
-ax.add_collection(xevents2)
-ax.add_collection(yevents1)
-ax.add_collection(yevents2)
-
-# set the limits
-ax.set_xlim([0, 1])
-ax.set_ylim([0, 1])
-
-ax.set_title('line plot with data points')
-
-# display the plot
-plt.show()
-fig.savefig("test.pdf",bbox_inches='tight')
+make_image(data, 'Paper Designs\\Journal\\test.png')
+# plt.savefig("Paper Designs\\Journal\\test.png", bbox_inches=0)
