@@ -19,13 +19,13 @@ top = height-marg-1.5*spacing;
 bottom = marg;
 left = marg;
 
-line_num = ceil((top-bottom)/spacing);
 lineheights = bottom:spacing:top;
 line_mat = zeros(length(lineheights),4);
 line_mat(:,1) = left;
 line_mat(:,2) = right;
 line_mat(:,3:4)= [lineheights; lineheights]';
 line_mat = line_mat+1;
+
 %tab in lines 1 and 4
 line_mat(end,1) = line_mat(end,1)+(right-left)/5;
 line_mat(end-3,1) = line_mat(end,1);
