@@ -19,12 +19,13 @@ plt.plot([0,width],[0,0],'k')
 plt.plot([0,0],[0,height],'k')
 plt.plot([0,width],[height,height],'k')
 plt.plot([width,width],[0,height],'k')
-plt.plot([5,5],[100,100])
+plt.plot([0,width],[0,height])
 
 
 plt.axis(bbox_inches=0)
 # plt.show()
 
-plt.savefig('Paper Designs\\Journal\\test.png',aspect='equal',dpi = 300)
+# plt.savefig('Paper Designs\\Journal\\test.pdf',aspect='equal',dpi = 300)
 
-# plt.savefig("Paper Designs\\Journal\\test.png", bbox_inches=0)
+# fig.savefig("Paper Designs\\Journal\\Author.png", bbox_inches=0, aspect='equal',dpi=300)
+fig.savefig("Paper Designs\\Journal\\Author", bbox_inches=0, aspect='equal',dpi=1000,papertype='letter',format='pdf')
