@@ -2,72 +2,43 @@ close all; clear all;
 
 %% Figure Shit
 scale = 1.2;
-fig = figure('units', 'pixels','position', [0 32 850/scale 1100/scale]);
+fig = figure('units', 'pixels','position', [1200 200 850/scale 1100/scale]);
 fig.Color = [.95 .95 .95];
 fig.PaperPosition = [0 0 8.5 11];
 % fig.MenuBar = 'none'; fig.ToolBar = 'none';
 hold on
 %% Actual Plot
-spacing = .175;  %change to .17 ish
-marg = spacing+.05; 
-right = 8.5-marg;
-top = 11-marg-3*spacing;
+width = 5;
+height=8.2;
+
+spacing = .25;  %change to .17 ish
+
+marg = 1.5*spacing; 
+right = width-marg;
+top = height-marg-1.5*spacing;
 bottom = marg;
 left = marg;
 
-
-x = marg:spacing:right;
-y = marg:spacing:top;
-points = zeros(length(x)*length(y),2);
-ind = 1;
-
-printvec('marg L',x(1),'')
-printvec('marg R',8.5-x(end),'')
-for i = 1:length(x)
-    for j = 1:length(y)
-        points(ind,:) = [x(i), y(j)];
-        ind = ind+1;
-    end
-end
+line_num = ceil((top-bottom)/spacing);
+lineheights = bottom:spacing:top;
+line_mat = zeros(length(lineheights),4);
+line_mat(:,1) = left;
+line_mat(:,2) = right;
+line_mat(:,3:4)= [lineheights; lineheights]';
+line_mat = line_mat+1;
+%tab in lines 1 and 4
+line_mat(end,1) = line_mat(end,1)+(right-left)/5;
+line_mat(end-3,1) = line_mat(end,1);
 
 
-col = [200, 200, 220]/235;
-tcol = [200, 200, 240]/255;
-right = max(x);
+plot(1+[0,width,width,0,0],1+[0,0,height,height,0],'-.k.','LineWidth',.25) %page outline
+plot(line_mat(:,1:2)',line_mat(:,3:4)','-k.','LineWidth',2) %actual writing lines
 
-%determine nice way to make subtle indents
+plot(1+[left,right/2],1+[top+1*spacing,top+1*spacing],'-k.','LineWidth',2) %date line
 
-plot([1, 6],[2, 2])
-plot([1, 6],[9, 9])
-plot([1, 6],[2, 2])
-plot([1, 6],[2, 2])
-
-
-
-%fix the way this header is made
-% plot([marg, right],[top+spacing top+spacing],'Color',tcol) 
-% plot([marg right],[top+2*spacing top+2*spacing],':','Color',tcol)
-% plot([x(9) x(9)],[top+spacing 11-marg],'Color',tcol)
-% plot([x(end-8) x(end-8)],[top+spacing 11-marg],'Color',tcol)
-% 
-% plot([marg right],[top+3*spacing top+3*spacing],'Color',col)
-% plot([marg marg],[top+3*spacing top+spacing],'Color',col)
-% plot([right right],[top+3*spacing top+spacing],'Color',col)
-
-
-txt = text(right-1.37,top+1.5*spacing,'Adrian Danao-Schroeder'); %Move this down to the line below it
-txt.Margin = 3;
-txt.FontSize = 8.75;
-txt.Color = [200, 200, 240]/555;
-
-
+plot(1+[left,left;right,right]',[1+bottom,line_mat(end-1,end);1+bottom,line_mat(end,end)]',':k.','LineWidth',1) %block end lines
 
 %% Setting the Figure to be nice
-
-% plot the dots
-pl = plot(points(:,1),points(:,2),'.');
-pl.MarkerSize = 4; 
-pl.Color = col;
 
 
 axis([0 8.5 0 11])
@@ -77,8 +48,8 @@ hAxes.Position = [0 0 1 1];
 axis off;
 name = strcat('The Author-',datestr(now,'yyyy-mm-dd'),'.pdf');
 
-% saveas(fig,name)
-% open(name)
+saveas(fig,name) 
+open(name)
 
 
 % close all
