@@ -3,7 +3,7 @@ import numpy as np
 
 # ALL UNITS IN MM
 width = 130 
-height = 210
+height = 2100
 
 bounds = np.array([[0,0],[0,height],[width,0],[width,height]])
 
