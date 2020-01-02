@@ -8,7 +8,7 @@ height = 210
 bounds = np.array([[0,0],[0,height],[width,0],[width,height]])
 
 fig = plt.figure()
-fig.set_size_inches(8.5,11)
+fig.set_size_inches(8.5,11, forward=True)
 ax = plt.Axes(fig, [0., 0., 1., 1.])
 ax.set_axis_off()
 fig.add_axes(ax)
@@ -28,4 +28,4 @@ plt.axis(bbox_inches=0)
 # plt.savefig('Paper Designs\\Journal\\test.pdf',aspect='equal',dpi = 300)
 
 # fig.savefig("Paper Designs\\Journal\\Author.png", bbox_inches=0, aspect='equal',dpi=300)
-fig.savefig("Paper Designs\\Journal\\Author", bbox_inches=0, aspect='equal',dpi=1000,papertype='letter',format='pdf')
+fig.savefig("Paper Designs\\Journal\\Author.pdf", bbox_inches=0, aspect='equal',dpi=1000,papertype='letter',format='pdf')
