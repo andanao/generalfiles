@@ -54,8 +54,8 @@ hAxes.Position = [0 0 1 1];
 axis off;
 name = strcat('The Author-',datestr(now,'yyyy-mm-dd'),'.pdf');
 
-% saveas(fig,name) 
-% open(name)
+saveas(fig,name) 
+open(name)
 
 
 % close all
